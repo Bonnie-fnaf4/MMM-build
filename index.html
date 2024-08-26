@@ -215,6 +215,11 @@
     unityGameInstance.SendMessage("DeleteData", "SaveData");
   };
   
+  window.BeforeUnloadEvent = function (){
+    unityGameInstance.SendMessage("DeleteData", "SaveData");
+    wait(1000);
+  }
+  
   
   </script>
 </body>
